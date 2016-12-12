@@ -1,0 +1,9 @@
+{
+    "manifest_version": 2,
+    "name": "MD-Newtab",
+    "description": "MD-themed new tab page that look pretty. :)",
+    "version": "0.0.1",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    }
+}

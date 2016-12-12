@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+    <title>MD-Newtab</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div data-ripple class="page-ripple"></div>
+    <div class="page-outer"><div class="page-middle"><div class="page-inner">
+        <span style="color:#37474F;font-size:100px;font-family:ps;">Welcome</span>
+        <br><br><a data-ripple href="https://gmail.com">INBOX</a><a data-ripple href="https://www.youtube.com">YOUTUBE</a><a data-ripple href="https://drive.google.com">DRIVE</a><a data-ripple href="https://github.com">GITHUB</a>
+        <br><br><form id="search"><input data-ripple id="search-bar" class="search-bar" type="text" placeholder="Search" autofocus><input class="search-submit" type="submit"></form>
+    </div></div></div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#search").on("submit", function(e){
+                e.preventDefault();
+
+                //console.log(document.getElementById("search-bar").value);
+                
+            });
+        });
+    </script>
+</body>
+</html>

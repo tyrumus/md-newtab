@@ -1,0 +1,111 @@
+@font-face {
+    font-family: roboto;
+    src: url(roboto.ttf);
+}
+@font-face {
+    font-family: ps;
+    src: url(ps.ttf);
+}
+@font-face {
+    font-family: rbc;
+    src: url(rbc.ttf);
+}
+
+html, body {
+    font-family: rbc;
+    font-size: 1em;
+    background-color: #263238;
+    color: #CFD8DC;
+    user-select: none;
+    cursor: default;
+    overflow: hidden;
+}
+
+.page-ripple {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.page-outer {
+    display: table;
+    position: absolute;
+    height: 99%;
+    width: 99%;
+    /*opacity: 0;
+    transition: opacity .3s ease-in-out;*/
+}
+.page-middle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+}
+.page-inner {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    width: 24em;
+    margin: 0 auto;
+    text-align: center;
+}
+.page-inner a {
+    color: #CFD8DC;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 10px;
+}
+.search-bar {
+    font-family: roboto;
+    font-size: 17px;
+    background-color: #546E7A;
+    color: #CFD8DC;
+    border-radius: 3px;
+    text-align: center;
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 400px;
+    padding: 10px;
+    transition: width 0.25s;
+}
+.search-bar:focus {
+    width: 500px;
+}
+.search-submit {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    left: -9999px;
+    top: 0;
+}
+
+
+
+/* MAD-RIPPLE EFFECT */
+.ripple{
+  position: absolute;
+  top:0; left:0; bottom:0; right:0;
+  overflow: hidden;
+  -webkit-transform: translateZ(0); /* to contain zoomed ripple */
+  transform: translateZ(0);
+  border-radius: inherit; /* inherit from parent (rounded buttons etc) */
+  pointer-events: none; /* allow user interaction */
+}
+.rippleWave{
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0.7); -webkit-transform: scale(0.7);
+  background: rgba(255,255,255, 1);
+  opacity: 0.15;
+          animation: ripple 1.4s forwards;
+  -webkit-animation: ripple 1.4s forwards;
+}
+@keyframes ripple {
+  to {transform: scale(24); opacity: 0;}
+}
+@-webkit-keyframes ripple {
+  to {-webkit-transform: scale(24); opacity: 0;}
+}
