@@ -17,16 +17,56 @@ html, body {
     background-color: #263238;
     color: #CFD8DC;
     user-select: none;
-    cursor: default;
-    overflow: hidden;
+    /*cursor: default;*/
+}
+::-webkit-scrollbar {
+    width: 4px;
 }
 
-.page-ripple {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+::-webkit-scrollbar-track {
+    visibility: hidden;
 }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #546E7A;
+}
+
+
+/* BOOKMARKS */
+.bkmk-cont {
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: #37474F;
+    width: 410px;
+    height: 200px;
+    position: relative;
+    border-radius: 3px;
+    padding: 5px;
+    overflow: auto;
+    font-family: rbc;
+    font-size: 20px;
+}
+.bkmk-entry {
+    background-color: #455A64;
+    text-align: initial;
+    width: 410px;
+}
+.bkmk-entry a {
+    width: 375px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: roboto;
+    font-size: 16px;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #CFD8DC;
+}
+
+
 .page-outer {
     display: table;
     position: absolute;

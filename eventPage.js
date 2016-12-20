@@ -1,14 +1,39 @@
+var bookmarkList = null;
+var sendResponse = null;
 function printOutput(txt){
 	console.log("event: "+txt);
 }
-function getBookmarks(){
-	chrome.bookmarks.getTree(function(results){
-		for (var i = 0; i < results.length; i++){
-			console.log("
-		}
+function printBookmarks(bookmarks){
+	bookmarkList = bookmarks;
+	bookmarks.forEach(function(bookmark){
+		console.log(bookmark.id+" - "+bookmark.title+": "+bookmark.url);
+		if(bookmark.children)
+			printBookmarks(bookmark.children);
 	});
 }
-getBookmarks();
+function getBookmarks(){
+	chrome.bookmarks.getTree(function(bookmarks){
+		printBookmarks(bookmarks);
+	});
+}
+function sendBack(){
+	sendResponse({bookmarks: bookmarkList});
+}
+chrome.runtime.onMessage.addListener(function(request,sender,sendResponse){
+	console.log(sender.tab ?
+                "from a content script:" + sender.tab.url :
+                "from the extension");
+	if(request.msg === "getBkmks"){
+		console.log("sent response");
+		chrome.bookmarks.getTree(function(bkmks){
+			bookmarkList = bkmks;
+			console.log("bookmarkList = "+bookmarkList);
+			sendBack();
+		});
+		//sendResponse({bookmarks: bookmarkList, response: "pong"});
+	}
+});
+/*getBookmarks();
 chrome.bookmarks.onCreated.addListener(function(){
 	printOutput("onCreated");
 	getBookmarks();
@@ -32,4 +57,4 @@ chrome.bookmarks.onChildrenReordered.addListener(function(){
 chrome.bookmarks.onImportEnded.addListener(function(){
 	printOutput("onImportEnded");
 	getBookmarks();
-});
+});*/
