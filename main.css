@@ -10,6 +10,34 @@
     font-family: rbc;
     src: url(rbc.ttf);
 }
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    top: 3px;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+}
 
 html, body {
     font-family: rbc;
@@ -44,16 +72,17 @@ html, body {
     border-radius: 3px;
     padding: 5px;
     overflow: auto;
+    overflow-x: hiddden;
     font-family: rbc;
     font-size: 20px;
 }
 .bkmk-entry {
+    padding: 0;
+    margin: 0;
     background-color: #455A64;
+    color: #CFD8DC;
     text-align: initial;
-    width: 410px;
-}
-.bkmk-entry a {
-    width: 375px;
+    width: 365px;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
@@ -63,7 +92,14 @@ html, body {
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-    color: #CFD8DC;
+}
+.bkmk-entry img {
+    width: 20px;
+    height: 20px;
+}
+.bkmk-subcont {
+    display: none;
+    background: #3f515a;
 }
 
 
