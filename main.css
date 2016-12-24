@@ -3,8 +3,8 @@
     src: url(roboto.ttf);
 }
 @font-face {
-    font-family: ps;
-    src: url(ps.ttf);
+    font-family: hello;
+    src: url(hello.woff2);
 }
 @font-face {
     font-family: rbc;
@@ -66,8 +66,8 @@ html, body {
     margin: 0 auto;
     margin-top: 40px;
     background-color: #37474F;
-    width: 410px;
-    height: 200px;
+    width: 510px;
+    height: 400px;
     position: relative;
     border-radius: 3px;
     padding: 5px;
@@ -82,7 +82,7 @@ html, body {
     background-color: #455A64;
     color: #CFD8DC;
     text-align: initial;
-    width: 365px;
+    width: 465px;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
