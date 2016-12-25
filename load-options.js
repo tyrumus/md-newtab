@@ -21,7 +21,8 @@ function loadOptions(){
             {name: "", href: "", enabled: false},
             {name: "", href: "", enabled: false},
             {name: "", href: "", enabled: false}
-        ]
+        ],
+        search: "goog"
     }, function(items){
         addRippleAttribs(items.ripple);
         addLinks(items.links);

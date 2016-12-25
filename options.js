@@ -6,7 +6,8 @@ function saveOptions(){
         {name: document.getElementById("title-link3").value || "", href: document.getElementById("href-link3").value || "", enabled: document.getElementById("check-link3").checked},
         {name: document.getElementById("title-link4").value || "", href: document.getElementById("href-link4").value || "", enabled: document.getElementById("check-link4").checked}
     ];
-    chrome.storage.sync.set({ripple: doRipple, links: linkList}, function(){
+    var searchEngine = document.getElementById("search-engine").value;
+    chrome.storage.sync.set({ripple: doRipple, links: linkList, search: searchEngine}, function(){
         document.getElementById("status").textContent = "Saved.";
         setTimeout(function(){
             document.getElementById("status").textContent = "";
@@ -21,7 +22,8 @@ function restoreOptions(){
             {name: "", href: "", enabled: false},
             {name: "", href: "", enabled: false},
             {name: "", href: "", enabled: false}
-        ]
+        ],
+        search: "goog"
     }, function(items){
         document.getElementById("ripples").checked = items.ripple;
         document.getElementById("title-link1").value = items.links[0].name;
@@ -36,6 +38,7 @@ function restoreOptions(){
         document.getElementById("title-link4").value = items.links[3].name;
         document.getElementById("href-link4").value = items.links[3].href;
         document.getElementById("check-link4").checked = items.links[3].enabled;
+        document.getElementById("search-engine").value = items.search;
     });
 }
 document.addEventListener("DOMContentLoaded", restoreOptions);

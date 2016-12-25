@@ -5,13 +5,8 @@ Since this is not in the Chrome Web Store, you will need to follow this guide to
 [How to force install on Linux](https://github.com/legostax/md-newtab/wiki/Installation)
 
 ## Features
-- Quick links to your most used websites
+- Customizable Quick links to your most used websites
 
-- Google search bar with animations
+- Search bar with animations that supports Google, DuckDuckGo, Yahoo, and Bing
 
 - Bookmarks widget
-
-## TODO
-- Make quick links customizable on options page
-
-- Allow Google search to be changed to a different default
