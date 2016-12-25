@@ -47,6 +47,14 @@ html, body {
     user-select: none;
     /*cursor: default;*/
 }
+a {
+    color: #CFD8DC;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 10px;
+    text-transform: uppercase;
+}
 ::-webkit-scrollbar {
     width: 4px;
 }
@@ -131,6 +139,11 @@ html, body {
     padding: 10px;
     border-radius: 3px;
     margin: 10px;
+    text-transform: uppercase;
+}
+.links-cont {
+    padding: 0;
+    margin: 0;
 }
 .search-bar {
     font-family: roboto;
