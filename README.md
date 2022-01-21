@@ -1,4 +1,6 @@
 # md-newtab
+**Unmaintained. I no longer use Chrome.**
+
 Material design new tab page for Chromium
 
 Since this is not in the Chrome Web Store, you will need to follow this guide to prevent the extension from being uninstalled.
